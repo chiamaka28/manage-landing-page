@@ -18,12 +18,13 @@ const NavBar = () => {
       <a href='#'>
         <img src='/logo.svg' alt='Logo' />
       </a>
-
       <div
         className={`${styles.overlay} ${isOpen ? styles.show : ''}`}
-        onClick={() => setIsOpen(false)}
+        onClick={() => {
+          setIsOpen(false);
+          console.log('clicked');
+        }}
       ></div>
-
       <div className={`${styles.mobileNav} ${isOpen ? styles.open : ''}`}>
         <ul>
           <li>
@@ -52,6 +53,9 @@ const NavBar = () => {
           alt={isOpen ? 'Close Menu' : 'Open Menu'}
         />
       </button>
+      <div className={styles.navButton}>
+        <a href='#'>Get Started</a>
+      </div>
     </div>
   );
 };

@@ -5,14 +5,14 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.footerContainer}>
-        <form action=''>
+        {/* <form action=''>
           <div>
             <input type='text' placeholder='Updates in your inbox…' />
           </div>
           <div>
             <button>Go</button>
           </div>
-        </form>
+        </form> */}
         <div className={styles.link}>
           <div>
             <ul>
