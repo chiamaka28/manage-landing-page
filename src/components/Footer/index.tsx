@@ -5,14 +5,14 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.footerContainer}>
-        {/* <form action=''>
+        <form action=''>
           <div>
             <input type='text' placeholder='Updates in your inbox…' />
           </div>
           <div>
             <button>Go</button>
           </div>
-        </form> */}
+        </form>
         <div className={styles.link}>
           <div>
             <ul>
@@ -61,14 +61,14 @@ const Footer = () => {
             <img src='icon-instagram.svg' alt='instagram' />
           </div>
         </div>
-        <div className={styles.footerLogo}>
-          <div>
-            <img src='logo.svg' alt='logo' />
-          </div>
-          <div>
-            <p>Copyright 2020. All Rights Reserved</p>
-          </div>
+        {/* <div className={styles.footerLogo}> */}
+        <div className={styles.logo}>
+          <img src='logo.svg' alt='logo' />
         </div>
+        <div className={styles.copyRight}>
+          <p>Copyright 2020. All Rights Reserved</p>
+        </div>
+        {/* </div> */}
       </div>
     </div>
   );

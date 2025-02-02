@@ -275,10 +275,9 @@
 .footerContainer {
   width: 90%;
   margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
   align-items: center;
+  justify-content: center;
 }
 .footer ul {
   list-style: none;
@@ -289,6 +288,7 @@
 }
 .footer ul li a {
   color: white;
+  font-size: 15px;
   text-decoration: none;
 }
 .link {
@@ -302,15 +302,18 @@
   align-items: center;
 }
 .social img {
-  width: 32px;
+  width: 30px;
 }
 .footer form {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  gap: 2rem;
 }
 .footer input {
   width: 100%;
+  height: 44px;
+  padding: 0 10px;
   border-radius: 22px;
   border: none;
 }
@@ -341,6 +344,9 @@
 }
 
 @media (min-width: 640px) {
+  .nav {
+    padding: 2rem 0;
+  }
   .mobileNav {
     position: static;
     background-color: transparent;
@@ -370,7 +376,7 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   .headerText {
     margin: 0;
@@ -386,7 +392,7 @@
     width: 50%;
   }
   .headerImage img {
-    width: 400px;
+    width: 370px;
     height: auto;
   }
   .button:hover {
@@ -450,10 +456,6 @@
     z-index: auto;
     border-radius: 0;
   }
-  .footerContainer {
-    flex-direction: row-reverse;
-    align-items: flex-start;
-  }
 }
 
 @media (min-width: 992px) {
@@ -478,5 +480,49 @@
   }
   .listText {
     margin-left: 0 0 0 80px;
+  }
+  .logo {
+    grid-area: logo;
+    justify-self: center;
+  }
+  .form {
+    grid-area: form;
+    justify-self: center;
+  }
+  .link {
+    grid-area: link;
+    justify-self: center;
+    gap: 6rem;
+  }
+  .copyRight {
+    grid-area: copyRight;
+    justify-self: center;
+    font-size: 13px;
+    text-align: right;
+  }
+  .social {
+    grid-area: social;
+    justify-content: flex-start;
+    justify-self: center;
+    gap: 1rem;
+  }
+  .social img {
+    width: 20px;
+  }
+  .footerContainer {
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'logo link form'
+      'social link copyRight';
+  }
+  .footer ul {
+    margin: 0;
+    padding: 0;
+    grid-area: list;
+  }
+  .footer ul li {
+    margin: 0 0 1rem 0;
   }
 }
