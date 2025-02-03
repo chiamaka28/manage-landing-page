@@ -3,7 +3,7 @@ import styles from '@/app/page.module.css';
 
 const Cta = () => {
   return (
-    <div className={`${styles.bgTablet} ${styles.cta}`}>
+    <div className={`${styles.bgTablet} ${styles.cta} `}>
       <div className={styles.container}>
         <div className={styles.ctaContent}>
           <div>

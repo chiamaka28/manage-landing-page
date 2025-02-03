@@ -152,6 +152,7 @@
   box-shadow: 0px 15px 15px -10px #ff9f8e;
   border-radius: 22px;
 }
+
 .ctaContent {
   display: flex;
   flex-direction: column;
@@ -169,6 +170,7 @@
   background-color: white;
   border-radius: 22px;
 }
+
 .responsive {
   width: 100%;
   height: auto;
@@ -490,7 +492,7 @@
   .bgTablet {
     background-image: url('/bg-simplify-section-desktop.svg');
     background-repeat: no-repeat;
-    background-position: top 0;
+    background-size: 100%;
   }
   .list::before {
     content: none;
