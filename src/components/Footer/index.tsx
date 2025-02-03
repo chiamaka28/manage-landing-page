@@ -47,29 +47,29 @@ const Footer = () => {
           <div>
             <ul>
               <li>
-                <a href='/'>Home</a>
+                <a href='#'>Home</a>
               </li>
               <li>
-                <a href='/'>Pricing</a>
+                <a href='#'>Pricing</a>
               </li>
               <li>
-                <a href='/'>Products</a>
+                <a href='#'>Products</a>
               </li>
               <li>
-                <a href='/'>About Us</a>
+                <a href='#'>About Us</a>
               </li>
             </ul>
           </div>
           <div>
             <ul>
               <li>
-                <a href='/'>Careers</a>
+                <a href='#'>Careers</a>
               </li>
               <li>
-                <a href='/'>Community</a>
+                <a href='#'>Community</a>
               </li>
               <li>
-                <a href='/'>Privacy Policy</a>
+                <a href='#'>Privacy Policy</a>
               </li>
             </ul>
           </div>

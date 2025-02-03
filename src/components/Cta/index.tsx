@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from '@/app/page.module.css';
-import Button from '../Button';
 
 const Cta = () => {
   return (
