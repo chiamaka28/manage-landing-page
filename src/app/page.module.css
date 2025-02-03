@@ -305,6 +305,10 @@
 .social img {
   width: 30px;
 }
+.error {
+  border: 3px solid red;
+  color: red;
+}
 .errorMessage {
   color: red;
   font-size: 10px;
@@ -349,12 +353,19 @@
   font-size: 13px;
   opacity: 1;
 }
+.footer input:focus {
+  outline: none;
+}
 .footer button {
   padding: 15px 30px;
   border-radius: 22px;
   border: none;
+  font-weight: 700;
   background-color: var(--color-bright-red);
   color: white;
+}
+.footer button:hover {
+  opacity: 0.7;
 }
 .footerLogo {
   display: flex;
@@ -363,6 +374,13 @@
   justify-content: center;
   align-items: center;
   margin: 3rem 0 0;
+}
+.logoPath {
+  fill: #fff;
+  transition: fill 0.3s ease;
+}
+.socialsPath:hover {
+  fill: var(--color-bright-red);
 }
 .footerLogo p {
   font-size: 13px;
