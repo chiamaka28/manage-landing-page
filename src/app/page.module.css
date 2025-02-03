@@ -274,6 +274,7 @@
 }
 .footerContainer {
   width: 90%;
+  max-width: 1140px;
   margin: auto;
   display: grid;
   align-items: center;
@@ -305,10 +306,7 @@
 .social img {
   width: 30px;
 }
-.error {
-  border: 3px solid red;
-  color: red;
-}
+
 .errorMessage {
   color: red;
   font-size: 10px;
@@ -319,8 +317,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* align-items: flex-start; */
-  /* max-width: 1000px; */
 }
 .emailInput {
   display: flex;
@@ -347,6 +343,13 @@
   border-radius: 22px;
   border: none;
 }
+
+.error {
+  border: 2px solid;
+  border-color: red;
+  color: red;
+}
+
 .footer input::placeholder {
   color: #8d8d8d;
   font-weight: 400;
@@ -530,7 +533,7 @@
   }
   .logo {
     grid-area: logo;
-    justify-self: center;
+    justify-self: start;
     margin-top: 0;
   }
   .form {
@@ -554,7 +557,7 @@
   .social {
     grid-area: social;
     justify-content: flex-start;
-    justify-self: center;
+    justify-self: start;
     gap: 1rem;
   }
 

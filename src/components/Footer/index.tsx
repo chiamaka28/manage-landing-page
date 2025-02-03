@@ -34,7 +34,7 @@ const Footer = () => {
               id='email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className={`${error ? styles.error : ''}`}
+              style={error ? { border: '2px solid red', color: 'red' } : {}}
             />
             <div>
               <button>Go</button>
