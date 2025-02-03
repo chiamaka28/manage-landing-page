@@ -10,7 +10,9 @@ const Main = () => {
         className={`${styles.container} ${styles.marginBottom} ${styles.main}`}
       >
         <div>
-          <h3 className={styles.mainHeader}>What’s different about Manage?</h3>
+          <h3 className={styles.mainHeader}>
+            What&apos;s different about Manage?
+          </h3>
           <p className={styles.textCenter}>
             Manage provides all the functionality your team needs, without the
             complexity. Our software is tailor-made for modern digital product
