@@ -11,7 +11,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Button from '../Button';
 
-export default () => {
+const Slider = () => {
   return (
     <div>
       <div className={styles.container}>
@@ -107,3 +107,5 @@ export default () => {
     </div>
   );
 };
+
+export default Slider;
