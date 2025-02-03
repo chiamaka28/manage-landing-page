@@ -1,16 +1,46 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import styles from '@/app/page.module.css';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState<string>('');
+
+  const validateEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (validateEmail(email)) {
+      setError('');
+      setEmail('');
+      console.log(email);
+      console.log('Email submitted:', email);
+    } else {
+      setError('Please enter a valid email address.');
+    }
+  };
   return (
     <div className={styles.footer}>
       <div className={styles.footerContainer}>
-        <form action=''>
-          <div>
-            <input type='text' placeholder='Updates in your inbox…' />
+        <form onSubmit={handleSubmit}>
+          <div className={styles.emailInput}>
+            <input
+              type='text'
+              placeholder='Updates in your inbox…'
+              name=''
+              id='email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <div>
+              <button>Go</button>
+            </div>
           </div>
-          <div>
-            <button>Go</button>
+          <div className={styles.errorMessageContainer}>
+            {error && <span className={styles.errorMessage}>{error}</span>}
           </div>
         </form>
         <div className={styles.link}>
@@ -46,19 +76,29 @@ const Footer = () => {
         </div>
         <div className={styles.social}>
           <div>
-            <img src='icon-facebook.svg' alt='facebook' />
+            <a href=''>
+              <img src='icon-facebook.svg' alt='facebook' />
+            </a>
           </div>
           <div>
-            <img src='icon-youtube.svg' alt='youtube' />
+            <a href=''>
+              <img src='icon-youtube.svg' alt='youtube' />
+            </a>
           </div>
           <div>
-            <img src='icon-twitter.svg' alt='twitter' />
+            <a href=''>
+              <img src='icon-twitter.svg' alt='twitter' />
+            </a>
           </div>
           <div>
-            <img src='icon-pinterest.svg' alt='pinterest' />
+            <a href=''>
+              <img src='icon-pinterest.svg' alt='pinterest' />
+            </a>
           </div>
           <div>
-            <img src='icon-instagram.svg' alt='instagram' />
+            <a href=''>
+              <img src='icon-instagram.svg' alt='instagram' />
+            </a>
           </div>
         </div>
         {/* <div className={styles.footerLogo}> */}
